@@ -20,6 +20,9 @@ if [ -d kernel/asus/sdm660 ]; then
 	cd ../../..
 fi
 
+# cleanup #3
+make installclean
+
 # Set up build environment
 export BUILD_USERNAME=rsuntk 
 export BUILD_HOSTNAME=nobody 
