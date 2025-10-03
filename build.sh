@@ -29,3 +29,5 @@ source build/envsetup.sh
 # Build the ROM
 riseup X01BD userdebug
 rise b
+
+[ -d out ] && ls out/target/product/X01BD
