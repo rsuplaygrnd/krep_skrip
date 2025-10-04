@@ -28,8 +28,6 @@ source build/envsetup.sh
 
 # Build the ROM
 riseup X01BD userdebug
-# cleanup #3
-make installclean
 rise b
 
 [ -d out ] && ls out/target/product/X01BD
