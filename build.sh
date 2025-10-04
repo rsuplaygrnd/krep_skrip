@@ -20,9 +20,6 @@ if [ -d kernel/asus/sdm660 ]; then
 	cd ../../..
 fi
 
-# cleanup #3
-make installclean
-
 # Set up build environment
 export BUILD_USERNAME=rsuntk 
 export BUILD_HOSTNAME=nobody 
@@ -31,6 +28,8 @@ source build/envsetup.sh
 
 # Build the ROM
 riseup X01BD userdebug
+# cleanup #3
+make installclean
 rise b
 
 [ -d out ] && ls out/target/product/X01BD
