@@ -2,7 +2,7 @@
 rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86
 
 # init repo
-repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/RisingOS-Revived/android.git -b sixteen -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/rsuplaygrnd/rising_manifests.git -b sixteen -g default,-mips,-darwin,-notdefault
 
 # clone local manifests
 git clone https://github.com/rsuplaygrnd/local_manifest --depth 1 -b X01BD-16.0_RisingOS .repo/local_manifests
