@@ -10,9 +10,6 @@ git clone https://github.com/rsuplaygrnd/local_manifest --depth 1 -b X01BD-16.0_
 # repo sync
 [ -f /usr/bin/resync ] && /usr/bin/resync || /opt/crave/resync.sh
 
-# cleanup #2
-#[ -d out ] && rm -rf out/target || echo "[-] No need to clean out/"
-
 # setup KernelSU
 if [ -d kernel/asus/sdm660 ]; then 
 	cd kernel/asus/sdm660
@@ -29,7 +26,7 @@ source build/envsetup.sh
 # Build the ROM
 lunch lineage_X01BD-bp2a-userdebug
 # cleanup #3
-#make installclean
+make installclean
 m evolution
 
 [ -d out ] && ls out/target/product/X01BD
