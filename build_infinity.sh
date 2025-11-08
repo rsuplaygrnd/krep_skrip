@@ -24,7 +24,7 @@ export TZ="Asia/Jakarta"
 source build/envsetup.sh
 
 # Build the ROM
-lunch infinity_X01BD-bp2a-user
+lunch infinity_X01BD-user
 # cleanup #3
 make installclean
 m bacon
