@@ -11,7 +11,7 @@ git clone https://github.com/rsuplaygrnd/local_manifest.git --depth 1 -b X01BD-1
 [ -f /usr/bin/resync ] && /usr/bin/resync || /opt/crave/resync.sh
 
 # setup KernelSU
-if [ -d kernel/asus/sdm660 ]; then 
+if [ -d kernel/asus/sdm660 ]; then
 	cd kernel/asus/sdm660
 	curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s main
 	cd ../../..
@@ -26,7 +26,7 @@ source build/envsetup.sh
 # Build the ROM
 lunch infinity_X01BD-user
 # cleanup #3
-make installclean
+#make installclean
 m bacon
 
 [ -d out ] && ls out/target/product/X01BD
