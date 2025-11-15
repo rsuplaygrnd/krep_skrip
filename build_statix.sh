@@ -27,6 +27,6 @@ source build/envsetup.sh
 lunch statix_X01BD-bp3a-userdebug
 # cleanup #3
 make installclean
-mka
+m
 
 [ -d out ] && ls out/target/product/X01BD
