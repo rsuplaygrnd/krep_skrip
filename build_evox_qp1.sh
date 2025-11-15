@@ -1,5 +1,5 @@
 # cleanup
-#rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86
+rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86
 
 # init repo
 repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/rsuplaygrnd/evox_manifest.git -b bka-q1 -g default,-mips,-darwin,-notdefault
