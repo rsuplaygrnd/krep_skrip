@@ -10,13 +10,6 @@ git clone https://github.com/rsuplaygrnd/local_manifest --depth 1 -b X01BD-16.0_
 # repo sync
 [ -f /usr/bin/resync ] && /usr/bin/resync || /opt/crave/resync.sh
 
-# setup KernelSU
-if [ -d kernel/asus/sdm660 ]; then 
-	cd kernel/asus/sdm660
-	curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s main
-	cd ../../..
-fi
-
 # Set up build environment
 export BUILD_USERNAME=rsuntk 
 export BUILD_HOSTNAME=nobody 
