@@ -2,6 +2,7 @@
 rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86/
 [ -d vendor/gms ] && rm -rf vendor/gms/
 [ -d device/lineage/sepolicy ] && rm -rf device/lineage/sepolicy/
+[ -d device/asus/X01BD ] && rm -rf device/asus/X01BD/
 
 # init repo
 repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/rsuntk/mica_manifest.git -b 16-qpr1 -g default,-mips,-darwin,-notdefault
