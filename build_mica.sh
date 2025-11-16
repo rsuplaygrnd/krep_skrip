@@ -1,5 +1,6 @@
 # cleanup
-rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86
+rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86/
+[ -d vendor/gms ] && rm -rf vendor/gms/
 
 # init repo
 repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/rsuntk/mica_manifest.git -b 16-qpr1 -g default,-mips,-darwin,-notdefault
