@@ -25,8 +25,6 @@ source build/envsetup.sh
 
 # Build the ROM
 lunch lineage_X01BD-bp3a-userdebug
-# cleanup #3
-make installclean
 m evolution
 
 [ -d out ] && ls out/target/product/X01BD
