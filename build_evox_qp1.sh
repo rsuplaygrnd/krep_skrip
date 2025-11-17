@@ -1,5 +1,7 @@
 # cleanup
 rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86
+[ -d device/qcom/sepolicy-legacy-um ] && rm -rf device/qcom/sepolicy-legacy-um
+[ -d device/qcom/sepolicy_vndr/legacy-um ] && rm -rf device/qcom/sepolicy_vndr/legacy-um
 
 # init repo
 repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/rsuplaygrnd/evox_manifest.git -b bka-q1 -g default,-mips,-darwin,-notdefault
