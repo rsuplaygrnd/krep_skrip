@@ -31,7 +31,7 @@ export TARGET_EXCLUDE_GMS=true
 # Build the ROM
 lunch mica_X01BD-bp3a-userdebug
 # cleanup #3
-#make installclean
+make installclean
 m mica-release
 
 [ -d out ] && ls out/target/product/X01BD
