@@ -1,5 +1,18 @@
 # cleanup
-rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86
+remove_lists=(
+.repo/local_manifests
+prebuilts/clang/host/linux-x86
+device/qcom/sepolicy
+device/qcom/sepolicy-legacy-um
+device/qcom/sepolicy_vndr/legacy-um
+device/asus/sdm660-common
+device/asus/X01BD
+kernel/asus/sdm660
+kernel/asus/sdm660/KernelSU
+out/target/product/X01BD
+)
+
+rm -rf "${remove_lists[@]}"
 
 # init repo
 repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/rsuplaygrnd/rising_manifests.git -b sixteen -g default,-mips,-darwin,-notdefault
@@ -25,7 +38,6 @@ source build/envsetup.sh
 
 # Build the ROM
 riseup X01BD userdebug
-# cleanup #3
 make installclean
 rise b
 

@@ -1,7 +1,18 @@
 # cleanup
-rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86
-rm -rf device/qcom/sepolicy-legacy-um device/qcom/sepolicy_vndr/legacy-um
-rm -rf device/asus/sdm660-common device/asus/X01BD
+remove_lists=(
+.repo/local_manifests
+prebuilts/clang/host/linux-x86
+device/qcom/sepolicy
+device/qcom/sepolicy-legacy-um
+device/qcom/sepolicy_vndr/legacy-um
+device/asus/sdm660-common
+device/asus/X01BD
+kernel/asus/sdm660
+kernel/asus/sdm660/KernelSU
+out/target/product/X01BD
+)
+
+rm -rf "${remove_lists[@]}"
 
 # init repo
 repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/rsuplaygrnd/evox_manifest.git -b bka-q1-los -g default,-mips,-darwin,-notdefault

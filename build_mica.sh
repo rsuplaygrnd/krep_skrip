@@ -1,8 +1,18 @@
 # cleanup
-rm -rf .repo/local_manifests/ prebuilts/clang/host/linux-x86/
-[ -d vendor/gms ] && rm -rf vendor/gms/
-[ -d device/lineage/sepolicy ] && rm -rf device/lineage/sepolicy/
-[ -d device/asus/X01BD ] && rm -rf device/asus/X01BD/
+remove_lists=(
+.repo/local_manifests
+prebuilts/clang/host/linux-x86
+device/qcom/sepolicy
+device/qcom/sepolicy-legacy-um
+device/qcom/sepolicy_vndr/legacy-um
+device/asus/sdm660-common
+device/asus/X01BD
+kernel/asus/sdm660
+kernel/asus/sdm660/KernelSU
+out/target/product/X01BD
+)
+
+rm -rf "${remove_lists[@]}"
 
 # init repo
 repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/rsuntk/mica_manifest.git -b 16-qpr1 -g default,-mips,-darwin,-notdefault
@@ -30,7 +40,6 @@ export TARGET_EXCLUDE_GMS=true
 
 # Build the ROM
 lunch mica_X01BD-bp3a-userdebug
-# cleanup #3
 make installclean
 m mica-release
 
