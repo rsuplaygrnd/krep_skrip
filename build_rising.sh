@@ -8,7 +8,6 @@ device/qcom/sepolicy_vndr/legacy-um
 device/asus/sdm660-common
 device/asus/X01BD
 kernel/asus/sdm660
-kernel/asus/sdm660/KernelSU
 out/target/product/X01BD
 )
 

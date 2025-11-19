@@ -8,14 +8,13 @@ device/qcom/sepolicy_vndr/legacy-um
 device/asus/sdm660-common
 device/asus/X01BD
 kernel/asus/sdm660
-kernel/asus/sdm660/KernelSU
 out/target/product/X01BD
 )
 
 rm -rf "${remove_lists[@]}"
 
 # init repo
-repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/rsuplaygrnd/evox_manifest.git -b bka-q1-los -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/rsuplaygrnd/evox_manifest.git -b bka-q1 -g default,-mips,-darwin,-notdefault
 
 # clone local manifests
 git clone https://github.com/rsuplaygrnd/local_manifest --depth 1 -b X01BD-16.0_EvoX .repo/local_manifests
