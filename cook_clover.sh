@@ -23,11 +23,11 @@ git clone https://github.com/rsuplaygrnd/local_manifest.git --depth 1 -b clover-
 [ -f /usr/bin/resync ] && /usr/bin/resync || /opt/crave/resync.sh
 
 # setup KernelSU
-if [ -d kernel/asus/sdm660 ]; then
-	cd kernel/asus/sdm660
-	curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s main
-	cd ../../..
-fi
+#if [ -d kernel/asus/sdm660 ]; then
+#	cd kernel/asus/sdm660
+#	curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s main
+#	cd ../../..
+#fi
 
 # Set up build environment
 export BUILD_USERNAME=rsuntk
