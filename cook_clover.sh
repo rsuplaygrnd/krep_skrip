@@ -40,6 +40,6 @@ export TARGET_EXCLUDE_GMS=true
 # Build the ROM
 lunch clover_X01BD-bp3a-userdebug
 make installclean
-m mica-release
+mka clover -j$(nproc --all)
 
 [ -d out ] && ls out/target/product/X01BD
